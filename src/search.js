@@ -8,22 +8,29 @@ function search(data, target) {
 
     while (data[Math.min(currentStep, len) -1 ] < target) {
         //if we havent found the block, move to next block
-        blockStart = currentStep += step
+        blockStart = currentStep 
+        currentStep += step
         // if the next nblock is bigger then the array, target doesnt exist, return -1
-        if(blockStart >= len) return -1
+        if(blockStart >= len) {
+            return -1 
+        } 
     }
 
     //search in the block until we find the possible index of target
     while (data[blockStart] < target) {
         blockStart++
         // if we reach next block target doesnt exist
-        if(blockStart == Math.min(currentStep, len)) return -1
+        if(blockStart == Math.min(currentStep, len)) {
+            return -1
+        }
     }
 
     // check if the element is the target if not tearget doesnt exist
     if(data[blockStart] == target) {
         return blockStart
-    } else return -1
+    } else {
+        return -1
+    } 
 
 }
 
