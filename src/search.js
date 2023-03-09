@@ -2,13 +2,13 @@ function search(data, target) {
     //get length of array
     let len = data.length
     //get the block size for the jump
-    let step = Math.floor(Math.swrt(len))
+    let step = Math.floor(Math.sqrt(len))
     let blockStart = 0
     let currentStep = step
 
     while (data[Math.min(currentStep, len) -1 ] < target) {
         //if we havent found the block, move to next block
-        blockStart = currentStepcurrentStep += step
+        blockStart = currentStep += step
         // if the next nblock is bigger then the array, target doesnt exist, return -1
         if(blockStart >= len) return -1
     }
