@@ -6,6 +6,8 @@ function search(data, target) {
     let blockStart = 0
     let currentStep = step
 
+    // sort the data ??
+
     while (data[Math.min(currentStep, len) -1 ] < target) {
         //if we havent found the block, move to next block
         blockStart = currentStep 
@@ -35,7 +37,9 @@ function search(data, target) {
 }
 
 
+function sortData() {
 
+}
 
 
 
