@@ -6,6 +6,18 @@ describe('binary jump search', () => {
         // bubbleSort(array)
         expect(search(array, num)).toEqual(array.indexOf(17))
     })
+    it('element not in array', () => {
+        const num = 11
+        const array = [1,2,3,4,5,6,7,8,9,10,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30]
+        // bubbleSort(array)
+        expect(search(array, num)).toEqual()
+    })
+    it('array not givin', () => {
+        const num = 20
+        const array = []
+        // bubbleSort(array)
+        expect(search(array, num)).toEqual([])
+    })
     // it('test sort', () => {
     //     const array = [3,2,4,1]
     //     // bubbleSort(array)
